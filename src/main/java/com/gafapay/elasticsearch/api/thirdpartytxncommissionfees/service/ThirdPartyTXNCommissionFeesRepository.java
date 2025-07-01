@@ -1,0 +1,12 @@
+package com.gafapay.elasticsearch.api.thirdpartytxncommissionfees.service;
+
+import com.gafapay.elasticsearch.api.thirdpartytxncommissionfees.model.request.GetAllThirdPartyTxnCommissionFeesRequest;
+import com.gafapay.elasticsearch.api.thirdpartytxncommissionfees.model.request.GetThirdPartyTxnCommissionFeesRequest;
+import com.gafapay.elasticsearch.api.thirdpartytxncommissionfees.model.response.GetAllThirdPartyTxnCommissionFeesResponse;
+import com.gafapay.elasticsearch.api.thirdpartytxncommissionfees.model.response.GetThirdPartyTxnCommissionFeesResponse;
+
+public interface ThirdPartyTXNCommissionFeesRepository {
+   GetThirdPartyTxnCommissionFeesResponse getThirdPartyTxnCommissionFees(GetThirdPartyTxnCommissionFeesRequest getThirdPartyTxnCommissionFeesRequest);
+
+   GetAllThirdPartyTxnCommissionFeesResponse getAllThirdPartyTxnCommissionFees(GetAllThirdPartyTxnCommissionFeesRequest getAllThirdPartyTxnCommissionFeesRequest);
+}

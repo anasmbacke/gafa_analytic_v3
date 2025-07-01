@@ -1,0 +1,53 @@
+package com.gafapay.elasticsearch.api.merchantpaymentstatistics.model.request;
+
+import com.gafapay.elasticsearch.api.commonrequest.CommonAPIDataRequest;
+import com.gafapay.elasticsearch.api.commonrequest.DateFilter;
+import com.gafapay.elasticsearch.api.commonrequest.DropDownFilter;
+import com.gafapay.elasticsearch.api.commonrequest.SearchFilter;
+import org.apache.commons.lang3.StringUtils;
+
+public class MerchantPaymentStatisticsRequest extends CommonAPIDataRequest {
+   private String credit_account_type_id;
+   private DropDownFilter dropdown_filter;
+   private SearchFilter search_filter;
+   private DateFilter date_filter;
+
+   public Boolean checkBadRequest() {
+      return StringUtils.isEmpty(this.getCompany_id()) ? true : false;
+   }
+
+   public String getCredit_account_type_id() {
+      return this.credit_account_type_id;
+   }
+
+   public DropDownFilter getDropdown_filter() {
+      return this.dropdown_filter;
+   }
+
+   public SearchFilter getSearch_filter() {
+      return this.search_filter;
+   }
+
+   public DateFilter getDate_filter() {
+      return this.date_filter;
+   }
+
+   public void setCredit_account_type_id(final String credit_account_type_id) {
+      this.credit_account_type_id = credit_account_type_id;
+   }
+
+   public void setDropdown_filter(final DropDownFilter dropdown_filter) {
+      this.dropdown_filter = dropdown_filter;
+   }
+
+   public void setSearch_filter(final SearchFilter search_filter) {
+      this.search_filter = search_filter;
+   }
+
+   public void setDate_filter(final DateFilter date_filter) {
+      this.date_filter = date_filter;
+   }
+
+   public MerchantPaymentStatisticsRequest() {
+   }
+}
